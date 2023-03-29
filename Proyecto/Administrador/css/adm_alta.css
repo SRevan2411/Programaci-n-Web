@@ -1,0 +1,59 @@
+html{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,170,45,1) 100%);
+    background-size: cover;
+    height: 100%;
+}
+
+#alerta{
+    color: red;
+}
+
+#mensaje{
+    color: red;
+}
+
+#Titulo{
+    font-size: 25px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 25%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: auto;
+    margin-top: 5%;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    
+}
+
+.formulario{
+    display: grid;
+    grid-row-gap: 10px;
+    
+}
+
+.entrada{
+    width: 300px;
+    height: 40px;
+}
+
+.boton{
+    appearance: none;
+    text-decoration: none;
+    background-color: #2ea44f;
+    text-align: center;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    border: 1px solid rgba(27, 31, 35, .15);
+    color: #fff;
+    height: 30px;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background-color: #2c974b;
+}

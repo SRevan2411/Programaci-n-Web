@@ -1,0 +1,155 @@
+html{
+    background-color: white;
+    background-size: cover;
+    height: 100%;
+}
+
+
+.contendor {
+    display: grid;
+    width: 100%;
+    
+}
+
+
+
+.header {
+    background-color: #1abc9c;
+    color: black;
+    font-family: sans-serif;
+    text-align: left;
+    height: 40px;
+    display: grid;
+    grid-template-columns: auto;
+    border-radius: 10px;
+}
+
+
+
+#hitem1{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#hitem2{
+    background-color: #1abc9c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+#hitem2:hover{
+    background-color: white;
+    border-style: solid;
+    border-color: #1abc9c;
+}
+
+#hitem2 a {
+    color: black;
+    text-decoration: none;
+}
+
+.titulo{
+    
+    background-color: #1abc9c;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+}
+
+.b{
+    border-radius: 15px 0px 0px 0px;
+}
+
+.f{
+    border-radius: 0px 15px 0px 0px;
+}
+
+.columna{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border: 1px solid rgb(214, 214, 194);
+    background-clip: padding-box;
+}
+
+
+
+.fila {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 15% 15% 14% 14% 14% 14% 14%; 
+    place-content: center;
+    
+    
+}
+
+.boton{
+    text-decoration: none;
+    background-color: #ec7063;
+    font-family: sans-serif;
+    border-style: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    padding: 3px 3px;
+}
+
+.boton:hover{
+    background-color: red;
+    color: white;
+}
+
+.boton2{
+    text-decoration: none;
+    background-color: #f7dc6f ;
+    font-family: sans-serif;
+    border-style: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px 3px;
+}
+
+.boton2:hover{
+    background-color: #f1c40f;
+    color: white;
+}
+
+.boton3{
+    text-decoration: none;
+    background-color: #8af76f ;
+    font-family: sans-serif;
+    border-style: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    padding: 3px 3px;
+}
+
+.boton3:hover{
+    background-color: #04b804;
+    color: white;
+}
