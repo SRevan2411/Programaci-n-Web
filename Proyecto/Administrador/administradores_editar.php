@@ -21,11 +21,13 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
         function precargarcampos(){
+            var ident = "<?php echo $id;?>";
             var nom = "<?php echo $nombre;?>";
             var app = "<?php echo $apellidos;?>";
             var cor = "<?php echo $correo;?>";
             var roln = "<?php echo $rol;?>";
-
+            $('#identificador').val(ident);
+            console.log(nom);
             $('#nombre').val(nom);
             $('#apellidos').val(app);
             $('#correotxt').val(cor);
@@ -35,7 +37,6 @@
 
         function verificarcampos(ident) {
             console.log(ident);
-            $('#identificador').val(ident);
             var nombre = $('#nombre').val();
             var apellidos = $('#apellidos').val();
             var correo = $('#correotxt').val();
@@ -53,13 +54,14 @@
         }
 
         function verificarcorreo(){
+            var ids = $('#identificador').val();
             var correo = $('#correotxt').val();
             console.log(correo);
             $.ajax({
                 url: "funciones/verificacorreo.php",
                 type: 'post',
                 dataType: 'text',
-                data: 'correo='+correo,
+                data: {correo : correo, id : ids},
                 success: function res(flag){
                     if (flag == 1) {
                         $('#correotxt').val('');
@@ -76,10 +78,13 @@
     </script>
 </head>
 <body onload="precargarcampos();">
+    <?php
+        include('menu.php');
+    ?>
     <div class="contenedor">
-        <p id="Titulo">Editar administrador</p>
-        <form action="" class="formulario" name="form01">
-            <a href="administradores_lista.php">Regresar al listado</a>
+        <p id="Titulo">Edición de administradores</p>
+        <form action="" class="formulario" name="form01" enctype="multipart/form-data">
+            
             <label for="nombre">Nombre:</label>
             <input type="text" placeholder="Ingrese su nombre" name="nombre" class="entrada" id="nombre">
             <br>
@@ -91,7 +96,8 @@
             <div id="alerta"></div>
             <label for="pass">Contraseña:</label>
             <input type="password" placeholder="Ingrese su contraseña" name="pass" class="entrada" id="password">
-            
+            <label for="archivo">Seleccionar archivo:</label>
+            <input type="file" id="archivo" name="archivo">
             <label for="rol">Rol</label>
             <select name="rol" id="rol">
                 <option value="0">Selecciona</option>
@@ -103,6 +109,7 @@
             echo "<input type=\"submit\" value=\"Enviar\" class=\"boton\" onclick=\"verificarcampos($id); return false;\">"
             ?>
             <div id="mensaje"></div>
+            <a href="administradores_lista.php" class="boton2">Regresar al listado</a>
         </form>
         <p></p>
     </div>

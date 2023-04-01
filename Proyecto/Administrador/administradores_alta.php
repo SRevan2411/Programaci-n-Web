@@ -14,8 +14,10 @@
             var correo = $('#correotxt').val();
             var password = $('#password').val();
             var rol = $('#rol').val();
+            var archivo = $('#archivo').val();
+            console.log(archivo);
 
-            if (nombre == "" || apellidos == "" || correo == "" || password == "" || rol == 0) {
+            if (nombre == "" || apellidos == "" || correo == "" || password == "" || rol == 0 || archivo == "") {
                 $('#mensaje').html("Faltan campos por llenar");
                 setTimeout("$('#mensaje').html('');",5000);
             }else{
@@ -49,10 +51,13 @@
     </script>
 </head>
 <body>
+    <?php
+        include("menu.php");
+    ?>
     <div class="contenedor">
         <p id="Titulo">Alta de administradores</p>
-        <form action="" class="formulario" name="form01">
-            <a href="administradores_lista.php">Regresar al listado</a>
+        <form action="" class="formulario" name="form01" enctype="multipart/form-data">
+            
             <label for="nombre">Nombre:</label>
             <input type="text" placeholder="Ingrese su nombre" name="nombre" class="entrada" id="nombre">
             <br>
@@ -64,7 +69,8 @@
             <div id="alerta"></div>
             <label for="pass">Contraseña:</label>
             <input type="password" placeholder="Ingrese su contraseña" name="pass" class="entrada" id="password">
-            
+            <label for="archivo">Seleccionar archivo:</label>
+            <input type="file" id="archivo" name="archivo">
             <label for="rol">Rol</label>
             <select name="rol" id="rol">
                 <option value="0">Selecciona</option>
@@ -73,6 +79,7 @@
             </select>
             <input type="submit" value="Enviar" class="boton" onclick="verificarcampos(); return false;">
             <div id="mensaje"></div>
+            <a href="administradores_lista.php" class="boton2">Regresar al listado</a>
         </form>
         <p></p>
     </div>

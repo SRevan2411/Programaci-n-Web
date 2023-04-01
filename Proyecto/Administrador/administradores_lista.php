@@ -40,6 +40,10 @@
     </script>
 </head>
 <body>
+    <?php
+        include("menu.php");
+    ?>
+    <br>
     <div class="contenedor">
         <div class="header">
             <div class="hitem" id="hitem1"> Listado de administradores</div>

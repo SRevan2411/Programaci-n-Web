@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/adm_alta.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
         function verificarcampos() {
@@ -49,6 +49,12 @@
     </script>
 </head>
 <body>
+    <?php
+        session_start();
+        if (isset($_SESSION['idU'])) {
+            header("Location: bienvenido.php");
+        }
+    ?>
     <div class="contenedor">
         <p id="Titulo">Login</p>
         <form action="" class="formulario" name="form01">
@@ -62,5 +68,6 @@
         </form>
         <p></p>
     </div>
+    
 </body>
 </html>

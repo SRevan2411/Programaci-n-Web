@@ -1,8 +1,16 @@
 html{
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,170,45,1) 100%);
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../recursos/desert.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
 }
 
 .titulo{
@@ -19,9 +27,29 @@ html{
     margin-top: 50px;
     width: 70%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 8%;
     height: 500px;
     justify-content: center;
+}
+.boton2{
+    appearance: none;
+    text-decoration: none;
+    background-color: #ec7063;
+    text-align: center;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    border: 1px solid rgba(27, 31, 35, .15);
+    color: #fff;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton2:hover{
+    background-color: red;
 }
 
 #Enlace{
@@ -52,8 +80,24 @@ html{
 }
 
 .contenedor2{
+    /*
     background: rgb(61,246,129);
     background: radial-gradient(circle, rgba(61,246,129,1) 0%, rgba(55,202,244,1) 100%);
+    */
+    background: rgba(120, 66, 18, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.imagen{
+    max-width: 70%;
+    height: 40%;
+    margin: auto;
+    opacity: 10;
+    
 }
 .contenedor{
     display: flex;

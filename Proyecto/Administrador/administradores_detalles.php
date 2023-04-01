@@ -12,8 +12,21 @@
     <link rel="stylesheet" href="css/adm_detalles.css">
 </head>
 <body>
+    <?php
+        include('menu.php')
+    ?>
     <div class="master">
-        <div class="contenedor2"></div>
+        <div class="contenedor2">
+            <?php
+                $id = $_REQUEST['id'];
+                $sql = "SELECT * FROM administradores WHERE id = $id";
+                $res = $con->query($sql);
+                $datos = $res->fetch_array();
+                $archivo = $datos['archivo'];
+                $path = "Imágenes/$archivo";
+                echo "<img class=\"imagen\" src=\"$path\" alt=\"Imagen\">"
+            ?>
+        </div>
 
         <div class="contenedor">
             <div class="titulo">Detalles del administrador</div>
