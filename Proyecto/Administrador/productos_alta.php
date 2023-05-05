@@ -4,43 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta de administradores</title>
+    <title>Alta de productos</title>
     <link rel="stylesheet" href="css/adm_alta.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
         function verificarcampos() {
             var nombre = $('#nombre').val();
-            var apellidos = $('#apellidos').val();
-            var correo = $('#correotxt').val();
-            var password = $('#password').val();
-            var rol = $('#rol').val();
+            var codigo = $('#codigo').val();
+            var descripcion = $('#descripcion').val();
+            var costo = $('#costo').val();
+            var stock = $('#stock').val();
             var archivo = $('#archivo').val();
             console.log(archivo);
 
-            if (nombre == "" || apellidos == "" || correo == "" || password == "" || rol == 0 || archivo == "") {
+            if (nombre == "" || codigo == "" || descripcion == "" || costo == "" || stock == "" || archivo == "") {
                 $('#mensaje').html("Faltan campos por llenar");
                 setTimeout("$('#mensaje').html('');",5000);
             }else{
                 document.form01.method = 'post';
-                document.form01.action = 'administradores_salva.php';
+                document.form01.action = 'productos_salva.php';
                 document.form01.submit();
             }
         }
 
-        function verificarcorreo(){
-            var correo = $('#correotxt').val();
-            console.log(correo);
+        function verificarcodigo(){
+            var codigo = $('#codigo').val();
+            console.log(codigo);
             $.ajax({
-                url: "funciones/verificacorreo.php",
+                url: "funciones/verificacodigo.php",
                 type: 'post',
                 dataType: 'text',
-                data: 'correo='+correo,
+                data: 'codigo='+codigo,
                 success: function res(flag){
                     console.log(flag);
                     if (flag == 1) {
                         console.log("entra");
-                        $('#correotxt').val('');
-                        $('#alerta').html("El correo "+correo+" ya existe");
+                        $('#codigo').val('');
+                        $('#alerta').html("El codigo "+codigo+" ya existe");
                         
 
                     }
@@ -57,31 +57,28 @@
         include("menu.php");
     ?>
     <div class="contenedor">
-        <p id="Titulo">Alta de administradores</p>
+        <p id="Titulo">Alta de productos</p>
         <form action="" class="formulario" name="form01" enctype="multipart/form-data">
             
             <label for="nombre">Nombre:</label>
-            <input type="text" placeholder="Ingrese su nombre" name="nombre" class="entrada" id="nombre">
+            <input type="text" placeholder="Ingrese el nombre" name="nombre" class="entrada" id="nombre">
             <br>
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" placeholder="Ingrese sus apellidos" name="apellidos" class="entrada" id="apellidos">
-            <br>
-            <label for="correo">Correo:</label>
-            <input type="text" placeholder="Ingrese su correo" onblur="verificarcorreo();" name="correo" class="entrada" id="correotxt">
+            <label for="codigo">Código:</label>
+            <input type="text" placeholder="Ingrese el código" onblur="verificarcodigo();" name="codigo" class="entrada" id="codigo">
             <div id="alerta"></div>
-            <label for="pass">Contraseña:</label>
-            <input type="password" placeholder="Ingrese su contraseña" name="pass" class="entrada" id="password">
+            <br>
+            <label for="descripcion">Descripción:</label>
+            
+            <textarea name="descripcion" id="descripcion" class="entrada" cols="30" rows="10"></textarea>
+            <label for="costo">Costo:</label>
+            <input type="text" placeholder="Ingrese el costo" name="costo" class="entrada" id="costo">
+            <label for="stock">Stock:</label>
+            <input type="text" placeholder="Ingrese el stock" name="stock" class="entrada" id="stock">
             <label for="archivo">Seleccionar archivo:</label>
             <input type="file" id="archivo" name="archivo">
-            <label for="rol">Rol</label>
-            <select name="rol" id="rol">
-                <option value="0">Selecciona</option>
-                <option value="1">Gerente</option>
-                <option value="2">Ejecutivo</option>
-            </select>
             <input type="submit" value="Enviar" class="boton" onclick="verificarcampos(); return false;">
             <div id="mensaje"></div>
-            <a href="administradores_lista.php" class="boton2">Regresar al listado</a>
+            <a href="productos_lista.php" class="boton2">Regresar al listado</a>
         </form>
         <p></p>
     </div>

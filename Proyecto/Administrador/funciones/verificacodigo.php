@@ -5,16 +5,15 @@ $con = conecta();
 $ban = 0;
 //Recibe variables
 
-$correo = $_REQUEST['correo'];
+$codigo = $_REQUEST['codigo'];
 
-if ($correo) {
-    //$sql = "DELETE FROM administradores WHERE id = $id";
+if ($codigo) {
     if(isset($_REQUEST['id']) && $_REQUEST['id']!="")
     {
         $id = $_REQUEST['id'];
-        $sql = "SELECT * FROM administradores WHERE correo = '$correo' AND id != $id AND status = 1 AND eliminado = 0";
+        $sql = "SELECT * FROM productos WHERE codigo = '$codigo' AND id != $id AND status = 1 AND eliminado = 0";
     }else{
-        $sql = "SELECT * FROM administradores WHERE correo = '$correo' AND status = 1 AND eliminado = 0";
+        $sql = "SELECT * FROM productos WHERE codigo = '$codigo' AND status = 1 AND eliminado = 0";
     }
     
     $res = $con->query($sql);

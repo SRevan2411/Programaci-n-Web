@@ -101,7 +101,7 @@ body{
 .fila {
     font-family: sans-serif;
     display: grid;
-    grid-template-columns: 15% 15% 14% 14% 14% 14% 14%; 
+    grid-template-columns: 20% 20% 20% 20% 20%; 
     place-content: center;
     
     
