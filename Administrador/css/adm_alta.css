@@ -1,0 +1,103 @@
+
+
+body{
+  
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../recursos/desert.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+#alerta{
+    color: red;
+}
+
+#mensaje{
+    color: red;
+}
+
+#Titulo{
+    font-size: 25px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: auto;
+    margin-top: 2%;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    
+}
+
+.formulario{
+    display: grid;
+    grid-row-gap: 10px;
+    
+}
+
+.entrada{
+    margin: auto;
+    width: 300px;
+    height: 40px;
+}
+
+.boton{
+    margin: auto;
+    width: 90%;
+    appearance: none;
+    text-decoration: none;
+    background-color: #2ea44f;
+    text-align: center;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    border: 1px solid rgba(27, 31, 35, .15);
+    color: #fff;
+    height: 30px;
+    cursor: pointer;
+}
+
+.boton2{
+    margin: auto;
+    width: 90%;
+    appearance: none;
+    text-decoration: none;
+    background-color: #ec7063;
+    text-align: center;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    border: 1px solid rgba(27, 31, 35, .15);
+    color: #fff;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton2:hover{
+    background-color: red;
+}
+
+.imagen{
+    max-width: 50%;
+    height: 50%;
+    margin: 5% auto;
+    opacity: 10;
+    
+}
+
+.boton:hover{
+    background-color: #2c974b;
+}
+
+.etiqueta{
+    margin: auto;
+}

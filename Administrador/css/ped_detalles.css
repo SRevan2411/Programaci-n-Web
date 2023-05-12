@@ -1,0 +1,152 @@
+body{
+    background-image: url("../recursos/adminpatron.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: scroll;
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+.Tabla{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:baseline;
+    font-family: sans-serif;
+    
+}
+
+.boton{
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #8af76f ;
+    font-family: sans-serif;
+    border-style: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    padding: 3px 3px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.boton:hover{
+    background-color: #04b804;
+    color: white;
+}
+
+.boton a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.boton2{
+    
+    text-decoration: none;
+    background-color: #ec7063 ;
+    font-family: sans-serif;
+    border-style: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    padding: 3px 3px;
+
+}
+
+.boton2:hover{
+    background-color: red;
+    color: white;
+}
+
+.boton2 a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.fila{
+    background-color: white;
+    display: grid;
+    width: 100%;
+    padding-left: 25%;
+    grid-template-columns: 20% 20% 20% 20%;
+    
+}
+
+.columna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(214, 214, 194);
+    background-clip: padding-box;
+}
+
+.columnaT{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(214, 214, 194);
+    background-clip: padding-box;
+    background-color: #1abc9c;
+
+}
+
+
+
+.contenedorm{
+    font-size: 20px;
+    background-color: #000;
+    color: white;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    height: 100px;
+    margin: auto;
+
+    
+}
+
+.contenedorm :hover{
+    background-color: gray;
+    
+}
+
+.columnam{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo{
+    max-width: 150px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: white;
+    margin: auto;
+    position: absolute;
+    margin-left: 25%;
+    font-size: 20px;
+    bottom: 0;
+}

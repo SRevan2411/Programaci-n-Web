@@ -1,0 +1,115 @@
+html{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../recursos/desert.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.titulo{
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.master{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 50px;
+    width: 70%;
+    margin: auto;
+    margin-top: 8%;
+    
+    justify-content: center;
+}
+.boton2{
+    appearance: none;
+    text-decoration: none;
+    background-color: #ec7063;
+    text-align: center;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    border: 1px solid rgba(27, 31, 35, .15);
+    color: #fff;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton2:hover{
+    background-color: red;
+}
+
+#Enlace{
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 200px;
+    border-radius: 6px;
+
+}
+#Enlace:hover {
+    background-color: #ffff;
+    color: black;
+    border-color: black;
+}
+
+.contenedor2{
+    /*
+    background: rgb(61,246,129);
+    background: radial-gradient(circle, rgba(61,246,129,1) 0%, rgba(55,202,244,1) 100%);
+    */
+    background: rgba(120, 66, 18, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.imagen{
+    max-width: 70%;
+    height: 40%;
+    margin: auto;
+    opacity: 10;
+    
+    
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aliceblue;
+    gap: 10px;
+    align-items: center;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+}
+
+.lab{
+    font-weight: bold;
+}
